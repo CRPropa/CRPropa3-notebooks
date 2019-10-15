@@ -13,7 +13,6 @@
 # In[1]:
 
 import crpropa
-import matplotlib.pyplot as plt
 import numpy as np
 
 n = 10000000
@@ -50,6 +49,10 @@ sim.add(obs_trash)
 
 # In[2]:
 
+get_ipython().magic(u'matplotlib inline')
+
+import matplotlib.pyplot as plt
+
 # source setup
 source = crpropa.Source()
 # inward=True for inwards directed emission and False for outwards directed emission
@@ -77,6 +80,8 @@ plt.close()
 # emission from sources that are distributed uniformly on the sphere shell by e.g.
 
 # In[3]:
+
+get_ipython().magic(u'matplotlib inline')
 
 source = crpropa.Source()
 source.add(crpropa.SourceUniformShell(center, radius))
